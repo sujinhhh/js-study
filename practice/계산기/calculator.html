@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="cal.css" />
+  </head>
+  <body>
+    <h1>CSS 스타일 변경하기</h1>
+    <form id="form">
+      <img src="1.JPG" width="600px" class="img" /><br />
+      <select class="select" name="" id="">
+        <option value="1.jpg">새람새하</option>
+        <option value="2.jpg">수진 마지막 부페</option>
+        <option value="3.jpg">몰라</option>
+        <option value="4.jpg">단발</option>
+      </select>
+      <span>변경할 색상</span>
+      <input type="color" class="input" />
+    </form>
+    <br />
+
+    <div class="calculator">
+      <input type="text" class="calculator-screen" value="" disabled />
+
+      <div class="calculator-keys">
+        <button type="button" class="operator" value="+">+</button>
+        <button type="button" class="operator" value="-">-</button>
+        <button type="button" class="operator" value="*">&times;</button>
+        <button type="button" class="operator" value="/">&divide;</button>
+
+        <button type="button" value="7">7</button>
+        <button type="button" value="8">8</button>
+        <button type="button" value="9">9</button>
+
+        <button type="button" value="4">4</button>
+        <button type="button" value="5">5</button>
+        <button type="button" value="6">6</button>
+
+        <button type="button" value="1">1</button>
+        <button type="button" value="2">2</button>
+        <button type="button" value="3">3</button>
+
+        <button type="button" value="0">0</button>
+        <button type="button" class="decimal" value=".">.</button>
+        <button type="button" class="all-clear" value="all-clear">AC</button>
+
+        <button type="button" class="equal-sign operator" value="=">=</button>
+      </div>
+    </div>
+
+    <script src="cal.js"></script>
+  </body>
+</html>
