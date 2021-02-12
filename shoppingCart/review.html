@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배운거 연습</title>
+    <!-- <link rel="stylesheet" href="review.css" /> -->
+    <style>
+      body {
+        margin: 0;
+      }
+      div {
+        display: flex;
+        margin: 0.5rem;
+        padding: 1rem;
+        border: 3px solid black;
+        min-height: 3rem;
+        flex-grow: 1;
+      }
+      .grandparent {
+        background-color: hsl(0, 50%, 50%);
+        flex-direction: column;
+      }
+      .parent {
+        background-color: hsl(100, 50%, 50%);
+      }
+      .child {
+        background-color: hsl(200, 50%, 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>배운거 연습</h1>
+    <div class="grandparent" style="display: none;">
+      <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+      </div>
+      <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+      </div>
+    </div>
+    <script src="review.js" defer></script>
+  </body>
+</html>
