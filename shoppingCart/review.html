@@ -10,35 +10,50 @@
         margin: 0;
       }
       div {
-        display: flex;
+        /* display: flex;
         margin: 0.5rem;
-        padding: 1rem;
-        border: 3px solid black;
+        padding: 1rem; */
+        border: 1px solid black;
         min-height: 3rem;
-        flex-grow: 1;
+        /* flex-grow: 1; */
       }
-      .grandparent {
+      .container {
+        display: flex;
+        height: 100vh;
         background-color: hsl(0, 50%, 50%);
-        flex-direction: column;
       }
       .parent {
+        flex-basis: 0;
+        flex: 1;
         background-color: hsl(100, 50%, 50%);
       }
-      .child {
+
+      .child:nth-child(1) {
+        flex-grow: 1;
+        background-color: hsl(200, 50%, 50%);
+      }
+      .child:nth-child(2) {
+        flex-grow: 4;
+        background-color: hsl(200, 50%, 50%);
+      }
+      .child:nth-child(3) {
+        flex-grow: 2;
+        background-color: hsl(200, 50%, 50%);
+      }
+      .child:nth-child(4) {
+        flex-grow: 1;
         background-color: hsl(200, 50%, 50%);
       }
     </style>
   </head>
   <body>
     <h1>배운거 연습</h1>
-    <div class="grandparent" style="display: none;">
+    <div class="container">
       <div class="parent">
-        <div class="child"></div>
-        <div class="child"></div>
-      </div>
-      <div class="parent">
-        <div class="child"></div>
-        <div class="child"></div>
+        <div class="child">Sujin</div>
+        <div class="child">you can do it</div>
+        <div class="child">I am</div>
+        <div class="child">awesome Programmer</div>
       </div>
     </div>
     <script src="review.js" defer></script>

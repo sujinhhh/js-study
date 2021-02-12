@@ -3,3 +3,9 @@
 body {
   font-family: "Nanum Pen Script", cursive;
 }
+
+.grandparent {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}

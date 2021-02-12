@@ -1,13 +1,35 @@
-// const body = document.body;
+// async
 
-// const div = document.querySelector("div");
-// const hi = document.querySelector("#hi");
-// const bye = document.querySelector("#bye");
+function makeRequest(location) {
+  return new Promise((resolve, reject) => {
+    console.log(`making request to ${location}`);
+    if (location === "google") {
+      resolve("google says hi");
+    } else {
+      reject("we can only talk to google");
+    }
+  });
+}
 
-// hi.style.backgroundColor = "red";
-// body.style.backgroundColor = "#eeeeee";
-// div.style.display = "flex";
-// div.style.alignItems = "center";
-// div.style.justifyContent = "center";
+function processRequest(response) {
+  return new Promise((resolve, reject) => {
+    console.log("processing response");
+    resolve(`extra informaiton ${response}`);
+  });
+}
 
-console.log(parseInt("88.4kgjk"));
+// makeRequest("google")
+//   .then((response) => {
+//     console.log("request recieved");
+//     return processRequest(response);
+//   })
+//   .then((processResponse) => {
+//     console.log(processResponse);
+//   });
+
+async function dowork() {
+  const response = await makeRequest("google");
+  console.log("request recieved");
+  const process = await processRequest(response);
+  console.log(process);
+}
