@@ -68,13 +68,13 @@ class UI {
     buttons.forEach((button) => {
       let id = button.dataset.id;
       let inCart = cart.find((item) => item.id === id);
-
       if (inCart) {
         button.innerText = "In Cart";
         button.disabled = true;
       }
       button.addEventListener("click", (e) => {
-        e.target.innerText = "In Cart";
+        e.target.innerText = "In Cart->";
+        // e.target.disabled = true;
         e.target.disabled = true;
         // get product from products
         let cartItem = { ...Storage.getProduct(id), amount: 1 };
@@ -187,7 +187,7 @@ class UI {
     this.setCardValues(cart);
     Storage.saveCart(cart);
     let button = this.getSingleButton(id);
-    button.disabled = true;
+    button.disabled = false;
     button.innerHTML = `<i class="fas fa-shopping-cart"><i/>add to cart`;
   }
 
@@ -203,7 +203,7 @@ class Storage {
   }
   static getProduct(id) {
     let products = JSON.parse(localStorage.getItem("products"));
-    return products.find((product) => (product.id = id));
+    return products.find((product) => product.id === id);
   }
   static saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));

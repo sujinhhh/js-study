@@ -1,35 +1,23 @@
-// async
+// // async
 
-function makeRequest(location) {
-  return new Promise((resolve, reject) => {
-    console.log(`making request to ${location}`);
-    if (location === "google") {
-      resolve("google says hi");
-    } else {
-      reject("we can only talk to google");
-    }
-  });
-}
+// const study = async () => {
+//   const response = await fetch(
+//     "https://dog.ceo/api/breed/hound/images/random/3"
+//   );
+//   const data = await response.json();
+//   return data;
+// };
 
-function processRequest(response) {
-  return new Promise((resolve, reject) => {
-    console.log("processing response");
-    resolve(`extra informaiton ${response}`);
-  });
-}
-
-// makeRequest("google")
-//   .then((response) => {
-//     console.log("request recieved");
-//     return processRequest(response);
+// study()
+//   .then((data) => {
+//     const div = document.querySelector(".parent");
+//     let result = "";
+//     data.message.forEach((item) => {
+//       result += ` <img src = ${item} >`;
+//     });
+//     div.innerHTML = result;
+//     console.log(div);
 //   })
-//   .then((processResponse) => {
-//     console.log(processResponse);
+//   .catch((error) => {
+//     console.log(error.message);
 //   });
-
-async function dowork() {
-  const response = await makeRequest("google");
-  console.log("request recieved");
-  const process = await processRequest(response);
-  console.log(process);
-}

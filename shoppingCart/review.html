@@ -4,58 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>배운거 연습</title>
-    <!-- <link rel="stylesheet" href="review.css" /> -->
-    <style>
-      body {
-        margin: 0;
-      }
-      div {
-        /* display: flex;
-        margin: 0.5rem;
-        padding: 1rem; */
-        border: 1px solid black;
-        min-height: 3rem;
-        /* flex-grow: 1; */
-      }
-      .container {
-        display: flex;
-        height: 100vh;
-        background-color: hsl(0, 50%, 50%);
-      }
-      .parent {
-        flex-basis: 0;
-        flex: 1;
-        background-color: hsl(100, 50%, 50%);
-      }
-
-      .child:nth-child(1) {
-        flex-grow: 1;
-        background-color: hsl(200, 50%, 50%);
-      }
-      .child:nth-child(2) {
-        flex-grow: 4;
-        background-color: hsl(200, 50%, 50%);
-      }
-      .child:nth-child(3) {
-        flex-grow: 2;
-        background-color: hsl(200, 50%, 50%);
-      }
-      .child:nth-child(4) {
-        flex-grow: 1;
-        background-color: hsl(200, 50%, 50%);
-      }
-    </style>
+    <link rel="stylesheet" href="review.css" />
   </head>
   <body>
-    <h1>배운거 연습</h1>
-    <div class="container">
-      <div class="parent">
-        <div class="child">Sujin</div>
-        <div class="child">you can do it</div>
-        <div class="child">I am</div>
-        <div class="child">awesome Programmer</div>
-      </div>
-    </div>
+    <header>
+      <h1>배운거 연습</h1>
+    </header>
+    <section class="container">
+      <form id="my-form">
+        <h1>Add User</h1>
+        <div class="msg"></div>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" />
+        </div>
+        <input type="submit" class="btn" value="Submit" />
+      </form>
+      <ul id="users"></ul>
+      <!-- <ul class="items">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+      </ul> -->
+    </section>
+
     <script src="review.js" defer></script>
   </body>
 </html>
