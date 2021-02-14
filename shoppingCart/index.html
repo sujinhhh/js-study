@@ -39,7 +39,7 @@
               >
             </li> -->
             <li class="logged-in">
-              <a href="#" class="grey-text">Logout</a>
+              <a href="#" class="grey-text" id='logout'>Logout</a>
             </li>
             <!-- <li class="logged-in">
               <a
@@ -138,35 +138,7 @@
           </div>
         </div>
 
-        <!-- GUIDE LIST -->
-        <!-- <div class="container" style="margin-top: 40px;" >
-          <ul class="collapsible z-depth-0 guides" style="border: none;">
-            <li>
-              <div class="collapsible-header grey lighten-4">Guide title</div>
-              <div class="collapsible-body white">
-                Lorem ipsum dolor sit amet.
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header grey lighten-4">Guide title</div>
-              <div class="collapsible-body white">
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header grey lighten-4">Guide title</div>
-              <div class="collapsible-body white">
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header grey lighten-4">Guide title</div>
-              <div class="collapsible-body white">
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-            </li>
-          </ul>
-        </div> -->
+      
 
         <!-- Authentication End-->
         <div class="cart-btn">
@@ -175,7 +147,8 @@
           </span>
           <div class="cart-items">0</div>
         </div>
-        <span class="nav-icon">
+        <!-- burger icon -->
+        <span class="nav-toggle">
           <i class="fas fa-bars"></i>
         </span>
       </div>
@@ -223,6 +196,40 @@
       </div>
     </div>
     <!-- card ended -->
+
+<!-- ****  firebase -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBEr6iBT_eho-1HjlA9vBNkCOxdYNxN8e0",
+    authDomain: "shopping-mall-1ca4f.firebaseapp.com",
+    projectId: "shopping-mall-1ca4f",
+    storageBucket: "shopping-mall-1ca4f.appspot.com",
+    messagingSenderId: "947588867027",
+    appId: "1:947588867027:web:708ae9bf2edba117ad4526",
+    measurementId: "G-49KEJ4XLKC"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  // make auth and firestore references
+  const auth = firebase.auth()
+  const db = firebase.firestore()
+
+  //  update firestore seting
+  db.settings({timestampsInSnapshots: true})
+
+</script>
+
+<!-- end Firebase -->
+
     <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="scripts/auth.js"></script>
