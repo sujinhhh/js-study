@@ -1,1 +1,1 @@
-# js-study sauce
+# Youtube js-study tutorial
